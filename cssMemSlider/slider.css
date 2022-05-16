@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  }
+  .wraper {
+    margin: 1.25em auto;
+    width: 37.5em;
+    max-width: 100%;
+  }
+  input {
+    appearance: none;
+  }
+  label {
+    cursor:pointer;
+  }
+  label:hover {
+    background-color: #444;
+  }
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+  }
+  .wraper__slider {
+    padding: 1.25em;
+    border: 0.3125em solid #ccc;
+    background: #000;
+  }
+  .wraper__overflow {
+    width: 100%; 
+    overflow: hidden;
+  }
+  #slide1:checked ~ .wraper__slider .wraper__main-content {
+    margin-left: 0;
+  }
+  #slide2:checked ~ .wraper__slider .wraper__main-content {
+    margin-left: -100%;
+  }
+  #slide3:checked ~ .wraper__slider .wraper__main-content {
+    margin-left: -200%;
+  }
+  #slide4:checked ~ .wraper__slider .wraper__main-content {
+    margin-left: -300%;
+  }
+  #slide5:checked ~ .wraper__slider .wraper__main-content {
+    margin-left: -400%;
+  }
+  .wraper__slider .wraper__main-content {
+    transition: margin-left 0.5s ease;
+    width: 500%;
+    height: 100%;
+  }
+  .wraper__main-content {
+    display: flex;
+  }
+  h2 {
+    color: #fff;
+    text-align: justify;
+  }
+  .content-main__slide {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 500%;
+  }
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  .wraper__controls {
+    margin: 0.625em 0 0;
+    text-align: center;
+  }
+  label {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 1em;
+  }
+  #slide1:checked ~ .wraper__controls label:nth-child(1),
+  #slide2:checked ~ .wraper__controls label:nth-child(2),
+  #slide3:checked ~ .wraper__controls label:nth-child(3),
+  #slide4:checked ~ .wraper__controls label:nth-child(4), 
+  #slide5:checked ~ .wraper__controls label:nth-child(5) {
+    background: #444;
+  }
+  @media (max-width: 767px) {
+    .wraper {
+      margin: 0.3125em auto;
+      width: 31.25em;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    label {
+      width: 1.25em;
+      height: 1.25em;
+      margin: 0 0.625em;
+    }
+  }
+  @media (max-width: 321px) {
+    .wraper {
+      margin: 0.3125em auto;
+      width: 18.75em;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 1.5em;
+    }
+     label {
+      width: 1em;
+      height: 1em;
+      margin: 0 0.625em;
+    }
+  }
